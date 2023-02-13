@@ -7,7 +7,7 @@ services:
     networks:
       - proxy
     ports:
-      - 80:5017
+      - 5017:5017
     deploy:
       restart_policy:
         condition: none
