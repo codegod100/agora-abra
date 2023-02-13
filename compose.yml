@@ -4,6 +4,8 @@ version: "3.8"
 services:
   app:
     image: moonlion/agora-server
+    volumes:
+      - data:/home/root/agora
     networks:
       - proxy
     deploy:
@@ -26,7 +28,13 @@ services:
     #   timeout: 10s
     #   retries: 10
     #   start_period: 1m
+  bridge:
+    image: moonlion/agora-bridge
+    volumes:
+      - data:/agora-bridge
 
 networks:
   proxy:
     external: true
+volumes:
+  data:
