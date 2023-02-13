@@ -6,8 +6,6 @@ services:
     image: moonlion/agora-server
     networks:
       - proxy
-    ports:
-      - 5017:5017
     deploy:
       restart_policy:
         condition: none
@@ -23,7 +21,7 @@ services:
         #- "traefik.http.middlewares.${STACK_NAME}-redirect.headers.SSLHost=${DOMAIN}"
         - "coop-cloud.${STACK_NAME}.version="
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost"]
+      test: ["CMD", "curl", "-f", "http://localhost:5017"]
       interval: 30s
       timeout: 10s
       retries: 10
