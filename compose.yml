@@ -20,12 +20,12 @@ services:
         #- "traefik.http.middlewares.${STACK_NAME}-redirect.headers.SSLForceHost=true"
         #- "traefik.http.middlewares.${STACK_NAME}-redirect.headers.SSLHost=${DOMAIN}"
         - "coop-cloud.${STACK_NAME}.version="
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5017"]
-      interval: 30s
-      timeout: 10s
-      retries: 10
-      start_period: 1m
+    # healthcheck:
+    #   test: ["CMD", "curl", "-f", "http://localhost:5017"]
+    #   interval: 30s
+    #   timeout: 10s
+    #   retries: 10
+    #   start_period: 1m
 
 networks:
   proxy:
