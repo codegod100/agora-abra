@@ -40,7 +40,7 @@ services:
       - data:/agora-bridge
     deploy:
       restart_policy:
-        condition: none
+        delay: 30s
     
 
 networks:
