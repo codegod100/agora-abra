@@ -36,6 +36,10 @@ services:
     image: moonlion/agora-bridge:testing
     volumes:
       - data:/agora-bridge
+    deploy:
+      restart_policy:
+        condition: none
+    
 
 networks:
   proxy:
