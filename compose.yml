@@ -3,6 +3,8 @@ version: "3.8"
 
 services:
   app:
+    environment:
+      - SOURCES_YML_URL=$SOURCES_YML_URL
     image: moonlion/agora-server:testing
     volumes:
       - data:/home/root/agora
@@ -29,6 +31,8 @@ services:
     #   retries: 10
     #   start_period: 1m
   bridge:
+    environment:
+      - SOURCES_YML_URL=$SOURCES_YML_URL
     image: moonlion/agora-bridge:testing
     volumes:
       - data:/agora-bridge
