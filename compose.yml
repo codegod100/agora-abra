@@ -8,6 +8,8 @@ services:
     image: moonlion/agora-server:testing
     volumes:
       - data:/home/root/agora
+    ports:
+      - 5017:5017
     networks:
       - proxy
     deploy:
