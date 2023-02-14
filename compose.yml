@@ -3,7 +3,7 @@ version: "3.8"
 
 services:
   app:
-    image: moonlion/agora-server
+    image: moonlion/agora-server:testing
     volumes:
       - data:/home/root/agora
     networks:
@@ -29,7 +29,7 @@ services:
     #   retries: 10
     #   start_period: 1m
   bridge:
-    image: moonlion/agora-bridge
+    image: moonlion/agora-bridge:testing
     volumes:
       - data:/agora-bridge
 
