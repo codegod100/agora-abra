@@ -1,1 +1,1 @@
-echo "RUNNING abra.sh grabbing $SOURCES_YML_URL"
+wall "RUNNING abra.sh grabbing $SOURCES_YML_URL"
