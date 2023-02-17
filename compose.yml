@@ -37,7 +37,7 @@ services:
       - SOURCES_YML_URL=$SOURCES_YML_URL
     image: moonlion/agora-bridge:testing
     volumes:
-      - data:/agora-bridge
+      - data:/agora-bridge/garden
     deploy:
       restart_policy:
         delay: 30s
